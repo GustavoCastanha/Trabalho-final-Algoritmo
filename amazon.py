@@ -30,7 +30,7 @@ def validar_cpf(cpf):
     if len(cpf) != 11:
         return False
     
-    if cpf == cpf[0] * 11: #verifica se são todos os números são iguais
+    if cpf == cpf[0] * 11: #verifica se os números são iguais
         return False
     
     soma = sum(int(cpf[i]) * (10 - i) for i in range(9))
@@ -59,7 +59,7 @@ def cadastrar_cliente():
         print("Erro: CPF inválido!")
         cpf = input("CPF (11 dígitos): ")
     
-    cpf = ''.join(filter(str.isdigit, cpf)) #ira pegar numero por numero e juntar 123.456 **> 123456
+    cpf = ''.join(filter(str.isdigit, cpf)) #ira pegar número por número e juntar 123.456 **> 123456
     
 
     if cpf in clientes:
@@ -68,12 +68,30 @@ def cadastrar_cliente():
     
     senha = input("Senha (6 dígitos): ")
     
-    while not (senha.isdigit() and len(senha) == 6): #isdigit verifica se são somente números inseridos
-    #while len(senha) != 6: para liberar numeros + caracteres 
-        print("Erro: Senha deve ter 6 dígitos!")
+    while not (senha.isdigit() and len(senha) == 6): #isdigit aceita somente números 
+    #while len(senha) != 6: para liberar números + caracteres
+        #print("Erro: Senha deve conter 6 dígitos!!") 
+        print("Erro: Senha deve conter 6 dígitos, somente números!!")
         senha = input("Senha (6 dígitos): ")
     
     email = input("E-mail: ")
+    
+    while True:
+        if "@" not in email:
+           print("Error: o E-mail precisa de '@'!!")
+        
+        elif email.count('@') != 1:
+            print("Error: o E-mail deve conter apenas um '@'!!")
+
+        else:
+            posicao_at = email.index("@")
+            if posicao_at == 0 or posicao_at == - 1:
+                print("Error: o '@' não deve estar no começo/final do E-mail!!")
+            elif "." not in email[posicao_at:]:
+                print("Error: o E-mail deve conter '.' após o @!!")
+            else:
+                break
+        email = input("E-mail: ")              
     
   
     clientes[cpf] = {
