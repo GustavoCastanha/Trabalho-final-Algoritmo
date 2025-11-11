@@ -70,7 +70,8 @@ def cadastrar_cliente():
     
     while not (senha.isdigit() and len(senha) == 6): #isdigit verifica se são somente números inseridos
     #while len(senha) != 6: para liberar numeros + caracteres 
-        print("Erro: Senha deve ter 6 dígitos!")
+        #print("Erro: Senha deve ter 6 digitos!!")
+        print("Erro: Senha deve ter 6 dígitos e somente números!!")
         senha = input("Senha (6 dígitos): ")
     
     email = input("E-mail: ")
@@ -106,7 +107,7 @@ def fazer_compras(cpf):
         if escolha == "0":
             break
         
-        try:
+        try:s
             id_produto = int(escolha)
  
             if id_produto < 1 or id_produto > 20:
@@ -194,7 +195,7 @@ def pagar_conta(cpf):
     
     if cliente['desconto'] == 0:
         print("\n" + "-"*40)
-        jogar = input("🎲 Quer testar sua sorte para ganhar desconto? (s/n): ")
+        jogar = input("Quer testar sua sorte para ganhar desconto? (s/n): ")
         
         if jogar.lower() == 's':
             teste_sua_sorte(cpf)
@@ -230,9 +231,9 @@ def teste_sua_sorte(cpf):
 
     cliente = clientes[cpf]
     
-    print("\n" + "="*40)
-    print("🍀 TESTE SUA SORTE! 🍀")
-    print("="*40)
+    print("\n" + "-"*40)
+    print("**TESTE SUA SORTE!***")
+    print("-"*40)
     print("Adivinhe o número entre 0 e 100!")
     print("Se acertar, ganha 10% de desconto nesta compra!")
     
@@ -307,8 +308,6 @@ def login():
 
 #Função pricipal do codigo
 def main():
-    "Função principal do sistema"
-    
     print("="*40)
     print("   SISTEMA AMAZONCC - LOJA VIRTUAL")
     print("="*40)
@@ -328,7 +327,7 @@ def main():
             if cpf:
                 menu_cliente(cpf)
         elif opcao == "3":
-            print("\nObrigado pela preferência, VOLTE SEMPRE!!😉")
+            print("\nObrigado pela preferência, VOLTE SEMPRE!!:)")
             break
         else:
             print("Opção inválida!")
