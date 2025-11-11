@@ -328,7 +328,7 @@ def main():
     "Função principal do sistema"
     
     print("="*40)
-    print("   SISTEMA AMAZONCC - LOJA VIRTUAL")
+    print("   SISTEMA AMAZONCC - SUPERMERCADO")
     print("="*40)
     
     while True: 
