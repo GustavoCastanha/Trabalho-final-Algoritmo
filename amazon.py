@@ -76,6 +76,23 @@ def cadastrar_cliente():
     
     email = input("E-mail: ")
     
+    while True:
+        if "@" not in email:
+           print("Error: o E-mail precisa de '@'!!")
+        
+        elif email.count('@') != 1:
+            print("Error: o E-mail deve conter apenas um '@'!!")
+
+        else:
+            posicao_at = email.index("@")
+            if posicao_at == 0 or posicao_at == - 1:
+                print("Error: o '@' não deve estar no começo/final do E-mail!!")
+            elif "." not in email[posicao_at:]:
+                print("Error: o E-mail deve conter '.' após o @!!")
+            else:
+                break
+        email = input("E-mail: ")         
+    
   
     clientes[cpf] = {
         "nome": nome,
@@ -334,3 +351,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
