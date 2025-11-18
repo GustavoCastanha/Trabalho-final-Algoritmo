@@ -184,7 +184,7 @@ def mostrar_carrinho(cpf):
     
     ver_itens = input("\nVer todos os itens? (s/n): ")
     
-    if ver_itens.lower() == 's': #lower pega a caracter e coloca em caixa alta
+    if ver_itens.lower() == 's': #lower pega a caracter e deixa em minusculo
         print("\nItens no carrinho:")
         
         for i, item in enumerate(cliente['carrinho'], 1): #o enumerate faz o i percorrer o carrrinho e pega a quantidade e o item pega o nome dele 
@@ -211,8 +211,8 @@ def pagar_conta(cpf):
     print(f"Tipos de produtos: {len(cliente['carrinho'])}")
     
     if cliente['desconto'] == 0:
-        print("\n" + "-"*40)
-        jogar = input("🎲 Quer testar sua sorte para ganhar desconto? (s/n): ")
+        print("\n" + "────୨ৎ──── "*5) #"emoji" retirado do site  https://emojidb.org/style-emojis
+        jogar = input("Quer testar sua sorte para ganhar desconto? (s/n):")
         
         if jogar.lower() == 's':
             teste_sua_sorte(cpf)
@@ -248,13 +248,12 @@ def teste_sua_sorte(cpf):
 
     cliente = clientes[cpf]
     
-    print("\n" + "="*40)
-    print("🍀 TESTE SUA SORTE! 🍀")
-    print("="*40)
+    print("\n" + "────୨ৎ────"*2) #"emoji" retirado do site  https://emojidb.org/style-emojis
+    print("TESTE SUA SORTE!!!")
     print("Adivinhe o número entre 0 e 100!")
     print("Se acertar, ganha 10% de desconto nesta compra!")
     
-    numero_sorteado = 50  
+    numero_sorteado = 50
     
     try:
         palpite = int(input("\nDigite seu palpite (0-100): "))
@@ -268,7 +267,7 @@ def teste_sua_sorte(cpf):
 
         if palpite == numero_sorteado:
             cliente['desconto'] = 0.10
-            print("\n=== PARABÉNS! VOCÊ ACERTOU! ===")
+            print("\n✩₊˚.⋆☾⋆⁺₊✧ PARABÉNS! VOCÊ ACERTOU! ✩₊˚.⋆☾⋆⁺₊✧")#"emoji" retirado do site  https://emojidb.org/style-emojis
             print("Você ganhou 10% de desconto nesta compra!")
             return True
         else:
@@ -284,9 +283,9 @@ def teste_sua_sorte(cpf):
 def menu_cliente(cpf):    
     while True:
         cliente = clientes[cpf]
-        print(f"\n{'='*40}")
-        print(f"Bem-vindo(a), {cliente['nome']}!")
-        print(f"{'='*40}")
+        print(f"\n{'⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖'*2}")#"emoji" retirado do site  https://emojidb.org/style-emojis
+        print(f"      Bem-vindo(a), {cliente['nome']}!      ")
+        print(f"{'⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖'*2}")#"emoji" retirado do site  https://emojidb.org/style-emojis
         print("1 - Comprar produtos")
         print("2 - Ver carrinho")
         print("3 - Finalizar compra")
@@ -327,9 +326,9 @@ def login():
 def main():
     "Função principal do sistema"
     
-    print("="*40)
+    print("─── ⋆⋅☆⋅⋆ ──"*3) #"emoji" retirado do site  https://emojidb.org/style-emojis
     print("   SISTEMA AMAZONCC - SUPERMERCADO")
-    print("="*40)
+    print("─── ⋆⋅☆⋅⋆ ──"*3) #"emoji" retirado do site  https://emojidb.org/style-emojis
     
     while True: 
         print("\n=== MENU PRINCIPAL ===")
