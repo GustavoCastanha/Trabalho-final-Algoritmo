@@ -30,7 +30,7 @@ def validar_cpf(cpf):
     if len(cpf) != 11:
         return False
     
-    if cpf == cpf[0] * 11: #verifica se são todos os números são iguais
+    if cpf == cpf[0] * 11: #verifica se os números são iguais
         return False
     
     soma = sum(int(cpf[i]) * (10 - i) for i in range(9))
@@ -59,7 +59,7 @@ def cadastrar_cliente():
         print("Erro: CPF inválido!")
         cpf = input("CPF (11 dígitos): ")
     
-    cpf = ''.join(filter(str.isdigit, cpf)) #ira pegar numero por numero e juntar 123.456 **> 123456
+    cpf = ''.join(filter(str.isdigit, cpf)) #ira pegar número por número e juntar 123.456 **> 123456
     
 
     if cpf in clientes:
@@ -68,10 +68,10 @@ def cadastrar_cliente():
     
     senha = input("Senha (6 dígitos): ")
     
-    while not (senha.isdigit() and len(senha) == 6): #isdigit verifica se são somente números inseridos
-    #while len(senha) != 6: para liberar numeros + caracteres 
-        #print("Erro: Senha deve ter 6 digitos!!")
-        print("Erro: Senha deve ter 6 dígitos e somente números!!")
+    while not (senha.isdigit() and len(senha) == 6): #isdigit aceita somente números 
+    #while len(senha) != 6: para liberar números + caracteres
+        #print("Erro: Senha deve conter 6 dígitos!!") 
+        print("Erro: Senha deve conter 6 dígitos, somente números!!")
         senha = input("Senha (6 dígitos): ")
     
     email = input("E-mail: ")
@@ -91,7 +91,7 @@ def cadastrar_cliente():
                 print("Error: o E-mail deve conter '.' após o @!!")
             else:
                 break
-        email = input("E-mail: ")         
+        email = input("E-mail: ")              
     
   
     clientes[cpf] = {
@@ -124,7 +124,7 @@ def fazer_compras(cpf):
         if escolha == "0":
             break
         
-        try:s
+        try:
             id_produto = int(escolha)
  
             if id_produto < 1 or id_produto > 20:
@@ -184,7 +184,7 @@ def mostrar_carrinho(cpf):
     
     ver_itens = input("\nVer todos os itens? (s/n): ")
     
-    if ver_itens.lower() == 's': #lower pega a caracter e coloca em caixa alta
+    if ver_itens.lower() == 's': #lower pega a caracter e deixa em minusculo
         print("\nItens no carrinho:")
         
         for i, item in enumerate(cliente['carrinho'], 1): #o enumerate faz o i percorrer o carrrinho e pega a quantidade e o item pega o nome dele 
@@ -211,8 +211,8 @@ def pagar_conta(cpf):
     print(f"Tipos de produtos: {len(cliente['carrinho'])}")
     
     if cliente['desconto'] == 0:
-        print("\n" + "-"*40)
-        jogar = input("Quer testar sua sorte para ganhar desconto? (s/n): ")
+        print("\n" + "────୨ৎ──── "*5) #"emoji" retirado do site  https://emojidb.org/style-emojis
+        jogar = input("Quer testar sua sorte para ganhar desconto? (s/n):")
         
         if jogar.lower() == 's':
             teste_sua_sorte(cpf)
@@ -248,13 +248,12 @@ def teste_sua_sorte(cpf):
 
     cliente = clientes[cpf]
     
-    print("\n" + "-"*40)
-    print("**TESTE SUA SORTE!***")
-    print("-"*40)
+    print("\n" + "────୨ৎ────"*2) #"emoji" retirado do site  https://emojidb.org/style-emojis
+    print("TESTE SUA SORTE!!!")
     print("Adivinhe o número entre 0 e 100!")
     print("Se acertar, ganha 10% de desconto nesta compra!")
     
-    numero_sorteado = 50  
+    numero_sorteado = 50
     
     try:
         palpite = int(input("\nDigite seu palpite (0-100): "))
@@ -268,7 +267,7 @@ def teste_sua_sorte(cpf):
 
         if palpite == numero_sorteado:
             cliente['desconto'] = 0.10
-            print("\n=== PARABÉNS! VOCÊ ACERTOU! ===")
+            print("\n✩₊˚.⋆☾⋆⁺₊✧ PARABÉNS! VOCÊ ACERTOU! ✩₊˚.⋆☾⋆⁺₊✧")#"emoji" retirado do site  https://emojidb.org/style-emojis
             print("Você ganhou 10% de desconto nesta compra!")
             return True
         else:
@@ -284,9 +283,9 @@ def teste_sua_sorte(cpf):
 def menu_cliente(cpf):    
     while True:
         cliente = clientes[cpf]
-        print(f"\n{'='*40}")
-        print(f"Bem-vindo(a), {cliente['nome']}!")
-        print(f"{'='*40}")
+        print(f"\n{'⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖'*2}")#"emoji" retirado do site  https://emojidb.org/style-emojis
+        print(f"      Bem-vindo(a), {cliente['nome']}!      ")
+        print(f"{'⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖'*2}")#"emoji" retirado do site  https://emojidb.org/style-emojis
         print("1 - Comprar produtos")
         print("2 - Ver carrinho")
         print("3 - Finalizar compra")
@@ -325,9 +324,11 @@ def login():
 
 #Função pricipal do codigo
 def main():
-    print("="*40)
-    print("   SISTEMA AMAZONCC - LOJA VIRTUAL")
-    print("="*40)
+    "Função principal do sistema"
+    
+    print("─── ⋆⋅☆⋅⋆ ──"*3) #"emoji" retirado do site  https://emojidb.org/style-emojis
+    print("   SISTEMA AMAZONCC - SUPERMERCADO")
+    print("─── ⋆⋅☆⋅⋆ ──"*3) #"emoji" retirado do site  https://emojidb.org/style-emojis
     
     while True: 
         print("\n=== MENU PRINCIPAL ===")
@@ -344,11 +345,10 @@ def main():
             if cpf:
                 menu_cliente(cpf)
         elif opcao == "3":
-            print("\nObrigado pela preferência, VOLTE SEMPRE!!:)")
+            print("\nObrigado pela preferência, VOLTE SEMPRE!! :)")
             break
         else:
             print("Opção inválida!")
 
 if __name__ == "__main__":
     main()
-
