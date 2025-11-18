@@ -3,25 +3,24 @@ produtos = [
     {"id": 1, "nome": "Pasta de dente", "preco": 5.00},
     {"id": 2, "nome": "Arroz 5kg", "preco": 10.00},
     {"id": 3, "nome": "Feijão 1kg", "preco": 4.00},
-    {"id": 4, "nome": "Açúcar 1kg", "preco": 2.00},
-    {"id": 5, "nome": "Café 500g", "preco": 8.00},
+    {"id": 4, "nome": "Açúcar 1kg", "preco": 2.50},
+    {"id": 5, "nome": "Café 500g", "preco": 8.25},
     {"id": 6, "nome": "Leite 1L", "preco": 4.50},
-    {"id": 7, "nome": "Óleo de soja 900ml", "preco": 6.00},
+    {"id": 7, "nome": "Óleo de soja 900ml", "preco": 6.50},
     {"id": 8, "nome": "Macarrão 500g", "preco": 3.50},
-    {"id": 9, "nome": "Sal 1kg", "preco": 2.00},
+    {"id": 9, "nome": "Extrato de tomate 100g", "preco": 3.50},
     {"id": 10, "nome": "Farinha de trigo 1kg", "preco": 4.00},
     {"id": 11, "nome": "Sabão em pó 1kg", "preco": 12.00},
     {"id": 12, "nome": "Detergente 500ml", "preco": 2.50},
-    {"id": 13, "nome": "Papel higiênico", "preco": 15.00},
-    {"id": 14, "nome": "Sabonete", "preco": 3.00},
+    {"id": 13, "nome": "Papel higiênico", "preco": 15.75},
+    {"id": 14, "nome": "Sabonete", "preco": 3.99},
     {"id": 15, "nome": "Shampoo 400ml", "preco": 10.00},
-    {"id": 16, "nome": "Condicionador 400ml", "preco": 10.00},
-    {"id": 17, "nome": "Desodorante", "preco": 8.00},
-    {"id": 18, "nome": "Creme dental", "preco": 5.00},
-    {"id": 19, "nome": "Água sanitária 1L", "preco": 3.50},
-    {"id": 20, "nome": "Esponja de limpeza", "preco": 2.00}
+    {"id": 16, "nome": "Condicionador 400ml", "preco": 10.99},
+    {"id": 17, "nome": "Desodorante", "preco": 8.80},
+    {"id": 18, "nome": "Amaciante 5L", "preco": 5.00},
+    {"id": 19, "nome": "Escova de aço", "preco": 3.50},
+    {"id": 20, "nome": "Esponja", "preco": 2.00}
 ]
-
 
 #função que valida o cpf
 def validar_cpf(cpf):
@@ -45,7 +44,7 @@ def validar_cpf(cpf):
     digito2 = 0 if soma % 11 < 2 else 11 - (soma % 11)
     return int(cpf[10]) == digito2
 
-def cadastrar_cliente():
+def cadastrar_clientes():
     print("\n=== CADASTRO DE CLIENTE ===")
     nome = input("Nome: ")
     
@@ -107,7 +106,7 @@ def cadastrar_cliente():
     print(f"Limite de crédito: R$ 1000.00")
 
 #função que possibilita realizar as compras
-def fazer_compras(cpf):
+def compras(cpf):
     
     cliente = clientes[cpf]
     
@@ -294,7 +293,7 @@ def menu_cliente(cpf):
         opcao = input("\nEscolha: ")
 
         if opcao == "1":
-            fazer_compras(cpf)
+            compras(cpf)
         elif opcao == "2":
             mostrar_carrinho(cpf)
         elif opcao == "3":
@@ -339,7 +338,7 @@ def main():
         opcao = input("\nEscolha: ")
         
         if opcao == "1":
-            cadastrar_cliente()
+            cadastrar_clientes()
         elif opcao == "2":
             cpf = login()
             if cpf:
