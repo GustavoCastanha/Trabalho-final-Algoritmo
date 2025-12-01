@@ -362,6 +362,6 @@ def main():
             print("\nObrigado pela preferência, VOLTE SEMPRE!! :)")
             break
         else:
-            print("Opção inválida!")
+            print("Opção inválida!!")
 
 main()
