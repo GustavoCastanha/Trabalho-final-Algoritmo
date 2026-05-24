@@ -7,7 +7,7 @@ O projeto permite que usuários realizem cadastro, login, naveguem por um catál
 Além disso, o sistema inclui um recurso de gamificação, onde o usuário pode ganhar desconto ao testar sua sorte.
 
 # 🚀 Funcionalidades #
-👤 Cadastro de Usuário
+`👤 Cadastro de Usuário`
 
 `Registro com:`
 
@@ -79,6 +79,7 @@ Nome
 Preço
 
 #👥 Clientes #
+
 `Armazenados em um dicionário:`
 
 clientes = {
