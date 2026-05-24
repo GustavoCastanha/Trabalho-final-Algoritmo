@@ -113,17 +113,21 @@ clientes = {
 
 ✔ E-mail com:
 
-Um único "@"
+`Um único "@"`
 
-Ponto após "@"
+`Ponto após "@"`
 
-Formato válido
+`Formato válido`
 
 # 🎯 Objetivo do Projeto #
 `Este projeto tem fins educacionais e foi desenvolvido para praticar:`
 
-Lógica de programação
-Estruturas de dados (listas e dicionários)
-Funções e modularização
-Validação de dados
-Simulação de regras de negócio reais
+`Lógica de programação`
+
+`Estruturas de dados (listas e dicionários)`
+
+`Funções e modularização`
+
+`Validação de dados`
+
+`Simulação de regras de negócio reais`
