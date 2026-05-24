@@ -1,13 +1,13 @@
  # AMAZONCC - Sistema de Supermercado em Python #
 
-`📌 Sobre o Projeto`
+# 📌 Sobre o Projeto #
 
 O AMAZONCC é um sistema de simulação de compras em supermercado desenvolvido em Python para execução via terminal.
 O projeto permite que usuários realizem cadastro, login, naveguem por um catálogo de produtos, adicionem itens ao carrinho e finalizem compras com controle de crédito.
 Além disso, o sistema inclui um recurso de gamificação, onde o usuário pode ganhar desconto ao testar sua sorte.
 
 # 🚀 Funcionalidades #
-`👤 Cadastro de Usuário`
+# 👤 Cadastro de Usuário #
 
 `Registro com:`
 
