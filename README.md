@@ -71,7 +71,7 @@ Adiciona interatividade ao sistema
 
 
 # 🧠 Estrutura do Sistema #
- `📦 Produtos`
+# 📦 Produtos#
  
 Lista fixa contendo:
 
