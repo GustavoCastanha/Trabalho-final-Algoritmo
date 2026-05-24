@@ -12,10 +12,15 @@ Além disso, o sistema inclui um recurso de gamificação, onde o usuário pode 
 `Registro com:`
 
 Nome
+
 CPF (validado)
+
 E-mail
+
 Senha (6 dígitos numéricos)
+
 Verificação de dados duplicados
+
 Crédito inicial automático de R$ 1000,00
 
 
@@ -29,16 +34,22 @@ Validação de acesso
 # 🛍️ Sistema de Compras #
 
 Catálogo com 20 produtos
+
 Escolha por ID
+
 Seleção de quantidade
+
 Cálculo automático do valor
+
 Controle de crédito em tempo real
 
 
 # 🧺 Carrinho de Compras #
 
 Visualização do total da compra
+
 Listagem detalhada dos itens
+
 Exibição do crédito restante
 
 
@@ -47,11 +58,14 @@ Exibição do crédito restante
 Resumo completo da compra:
 
 Total de itens
+
 Tipos de produtos
+
 Valor total
 
 
 Opção de confirmação ou cancelamento
+
 Reset do crédito após pagamento
 
 
@@ -76,7 +90,9 @@ Adiciona interatividade ao sistema
 Lista fixa contendo:
 
 ID
+
 Nome
+
 Preço
 
 # 👥 Clientes #
