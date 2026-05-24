@@ -99,7 +99,7 @@ Preço
 
 `Armazenados em um dicionário:`
 
-clientes = {
+```clientes = {```
 
 
     "cpf": {
@@ -118,7 +118,7 @@ clientes = {
         
     }
     
-}
+```}```
 
 # ✅ Validações Implementadas #
 ✔ CPF válido (cálculo oficial dos dígitos verificadores)
