@@ -71,7 +71,7 @@ Adiciona interatividade ao sistema
 
 
 # 🧠 Estrutura do Sistema #
-# 📦 Produtos#
+# 📦 Produtos #
  
 Lista fixa contendo:
 
@@ -106,12 +106,17 @@ clientes = {
 
 # ✅ Validações Implementadas #
 ✔ CPF válido (cálculo oficial dos dígitos verificadores)
+
 ✔ Nome contendo apenas letras
+
 ✔ Senha numérica com exatamente 6 dígitos
+
 ✔ E-mail com:
 
 Um único "@"
+
 Ponto após "@"
+
 Formato válido
 
 # 🎯 Objetivo do Projeto #
