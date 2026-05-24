@@ -82,19 +82,12 @@ Preço
 `Armazenados em um dicionário:`
 
 clientes = {
-
     "cpf": {
-    
         "nome": "Nome do cliente",
-        
         "senha": "123456",
-        
         "email": "email@email.com",
-        
         "credito": 1000.00,
-        
         "carrinho": [],
-        
         "desconto": 0.0
     }
 }
