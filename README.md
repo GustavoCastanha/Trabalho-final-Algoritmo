@@ -72,13 +72,14 @@ Adiciona interatividade ao sistema
 
 # 🧠 Estrutura do Sistema #
  `📦 Produtos`
+ 
 Lista fixa contendo:
 
 ID
 Nome
 Preço
 
-#👥 Clientes #
+# 👥 Clientes #
 
 `Armazenados em um dicionário:`
 
