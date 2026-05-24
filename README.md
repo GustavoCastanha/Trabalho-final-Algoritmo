@@ -81,7 +81,7 @@ Preço
 #👥 Clientes #
 `Armazenados em um dicionário:`
 
-`clientes = {`
+clientes = {
 
     "cpf": {
     
