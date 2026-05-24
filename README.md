@@ -1,34 +1,30 @@
  # AMAZONCC - Sistema de Supermercado em Python #
-https://img.shields.io/badge/Python-3.x-blue
-https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow
-https://img.shields.io/badge/License-MIT-green
-📌 Sobre o Projeto
+
+`📌 Sobre o Projeto`
 O AMAZONCC é um sistema de simulação de compras em supermercado desenvolvido em Python para execução via terminal.
 O projeto permite que usuários realizem cadastro, login, naveguem por um catálogo de produtos, adicionem itens ao carrinho e finalizem compras com controle de crédito.
 Além disso, o sistema inclui um recurso de gamificação, onde o usuário pode ganhar desconto ao testar sua sorte.
 
-🚀 Funcionalidades
+# 🚀 Funcionalidades #
 👤 Cadastro de Usuário
 
-Registro com:
+`Registro com:`
 
 Nome
 CPF (validado)
 E-mail
 Senha (6 dígitos numéricos)
-
-
 Verificação de dados duplicados
 Crédito inicial automático de R$ 1000,00
 
 
-🔐 Login
+# 🔐 Login #
 
 Autenticação por CPF e senha
 Validação de acesso
 
 
-🛍️ Sistema de Compras
+# 🛍️ Sistema de Compras #
 
 Catálogo com 20 produtos
 Escolha por ID
@@ -37,14 +33,14 @@ Cálculo automático do valor
 Controle de crédito em tempo real
 
 
-🧺 Carrinho de Compras
+# 🧺 Carrinho de Compras #
 
 Visualização do total da compra
 Listagem detalhada dos itens
 Exibição do crédito restante
 
 
-💳 Pagamento
+# 💳 Pagamento #
 
 Resumo completo da compra:
 
@@ -57,14 +53,14 @@ Opção de confirmação ou cancelamento
 Reset do crédito após pagamento
 
 
-🎲 Teste sua sorte (Desconto)
+# 🎲 Teste sua sorte (Desconto) #
 
 O usuário pode participar de um minigame:
 
 Adivinhar um número entre 0 e 100
 
 
-Se acertar:
+`Se acertar:`
 
 Ganha 10% de desconto
 
@@ -72,16 +68,16 @@ Ganha 10% de desconto
 Adiciona interatividade ao sistema
 
 
-🧠 Estrutura do Sistema
-📦 Produtos
+# 🧠 Estrutura do Sistema #
+ `📦 Produtos`
 Lista fixa contendo:
 
 ID
 Nome
 Preço
 
-👥 Clientes
-Armazenados em um dicionário:
+#👥 Clientes #
+`Armazenados em um dicionário:`
 clientes = {
     "cpf": {
         "nome": "Nome do cliente",
@@ -93,7 +89,7 @@ clientes = {
     }
 }
 
-✅ Validações Implementadas
+# ✅ Validações Implementadas #
 ✔ CPF válido (cálculo oficial dos dígitos verificadores)
 ✔ Nome contendo apenas letras
 ✔ Senha numérica com exatamente 6 dígitos
@@ -103,8 +99,8 @@ Um único "@"
 Ponto após "@"
 Formato válido
 
-🎯 Objetivo do Projeto
-Este projeto tem fins educacionais e foi desenvolvido para praticar:
+# 🎯 Objetivo do Projeto #
+`Este projeto tem fins educacionais e foi desenvolvido para praticar:`
 
 Lógica de programação
 Estruturas de dados (listas e dicionários)
